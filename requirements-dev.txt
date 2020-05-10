@@ -1,0 +1,4 @@
+-r requirements.txt
+
+flake8==3.6.0
+ipython==7.1.1

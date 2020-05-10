@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div class="container">
+            <div class="spend-container">
+                <h1>Chase statement results</h1>
+
+                <div class="spend-item">
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Total Spend</th>
+                        </tr>
+                        {% for month_data in monthly_data %}
+                        <tr>
+                            <td>{{ month_data.date }}</td>
+                            <td>${{ month_data.spend }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="spend-item spend-vis">
+                    <img src="./chase_monthly.png" alt="Chase statement" />
+                </div>
+            </div>
+
+            <div class="spend-summary">
+                <h3>Average monthly burn: ${{ average_burn }}</h3>
+            </div>
+        </div>
+    </body>
+</html>
