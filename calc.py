@@ -12,7 +12,7 @@ templateLoader = jinja2.FileSystemLoader('./templates')
 templateEnv = jinja2.Environment(loader=templateLoader)
 
 
-def main(args) -> None:
+def main(args) = None:
     if args.use_mock_data:
         df = gen_fake_dataframe()
         generate_chase_stmt(df, args.chase_stmt_out)
